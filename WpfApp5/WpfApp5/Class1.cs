@@ -12,14 +12,14 @@ namespace WpfApp5
         public static DataTable ToDataTable<T>(this T[] arr)
         {
             var res = new DataTable();
-            for (int i = 0; i < arr.Length; i++)
+            for (int mdk = 0; mdk < arr.Length; mdk++)
             {
-                res.Columns.Add("col" + (i + 1), typeof(T));
+                res.Columns.Add("col" + (mdk + 1), typeof(T));
             }
             var row = res.NewRow();
-            for (int i = 0; i < arr.Length; i++)
+            for (int mdk = 0; mdk < arr.Length; mdk++)
             {
-                row[i] = arr[i];
+                row[mdk] = arr[mdk];
             }
             res.Rows.Add(row);
             return res;
